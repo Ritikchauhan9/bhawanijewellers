@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bhawanijewellers.vercel.app/sitemap.xml
