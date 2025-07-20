@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Bhawani Jewellers in Palghar for custom jewellery, services, and more. Get in touch with our team.">
+    <meta name="keywords" content="Contact Bhawani Jewellers, Palghar jeweller contact, jewellery enquiry">
+    <title>Contact | Bhawani Jewellers Palghar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-amber-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/696edb3b-ac1f-4578-ba90-cfd0f3d96c09.png" alt="Bhawani Jewellers logo" class="h-10">
+                <span class="text-xl font-serif font-bold">Bhawani Jewellers</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-amber-200">Home</a>
+                <a href="about.html" class="hover:text-amber-200">About</a>
+                <a href="collections.html" class="hover:text-amber-200">Collections</a>
+                <a href="services.html" class="hover:text-amber-200">Services</a>
+                <a href="contact.html" class="hover:text-amber-200 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-center text-amber-900 mb-12">Contact Us</h2>
+            <div class="max-w-xl mx-auto bg-amber-50 p-8 rounded-lg shadow-md">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required maxlength="40" placeholder="Enter your name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 transition-shadow focus:shadow-lg">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" required maxlength="50" placeholder="you@email.com" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 transition-shadow focus:shadow-lg">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <input type="tel" id="phone" name="phone" required pattern="^[+]?[0-9]{10,15}$" maxlength="15" placeholder="e.g. +91 86989 09955" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 transition-shadow focus:shadow-lg">
+                        <small class="text-xs text-gray-500">Enter a valid phone number with country code.</small>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required minlength="60" maxlength="500" placeholder="Type your message (min 60 characters, no spam)" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 transition-shadow focus:shadow-lg"></textarea>
+                        <small id="messageError" class="text-xs text-red-500 hidden">Message must be at least 60 characters and not contain spam words.</small>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-700 to-amber-500 hover:from-amber-800 hover:to-amber-600 text-white py-3 px-4 rounded-md font-semibold shadow-lg transition-transform transform hover:scale-105">Send to WhatsApp</button>
+                </form>
+                <script>
+                // Simple spam word list
+                const spamWords = ["spam", "viagra", "free money", "scam", "offer", "win", "prize"];
+                document.getElementById('contactForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const message = document.getElementById('message').value.trim();
+                    const messageError = document.getElementById('messageError');
+                    // Validate message
+                    let hasSpam = spamWords.some(word => message.toLowerCase().includes(word));
+                    if (message.length < 60 || hasSpam) {
+                        messageError.classList.remove('hidden');
+                        return;
+                    } else {
+                        messageError.classList.add('hidden');
+                    }
+                    // Format WhatsApp message
+                    const whatsappMsg = `Contact Form Submission:%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AMessage: ${encodeURIComponent(message)}`;
+                    const whatsappNumber = '918698909955';
+                    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMsg}`, '_blank');
+                });
+                </script>
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h4 class="font-medium mb-4">Direct Contact</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="font-medium mr-2">Phone:</span>
+                            <a href="tel:+918698909955" class="hover:text-amber-700">+91 86989 09955</a>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="font-medium mr-2">Email:</span>
+                            <a href="mailto:info@bhawani-jewellers.com" class="hover:text-amber-700">info@bhawani-jewellers.com</a>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="font-medium mr-2">Address:</span>
+                            <span>Shop No 3, Opposite Hutatma Chowk, Mahim Road, Palghar West - 401404</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">© 2024 Bhawani Jewellers. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
